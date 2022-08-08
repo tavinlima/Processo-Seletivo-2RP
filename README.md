@@ -37,7 +37,7 @@ status;
 
 ## Como executar:
 - O primeiro passo é clonar esse repositório na sua máquina. Dê um git clone em uma pasta do seu computador e puxe todo o conteúdo do repositório;
-![image](https://user-images.githubusercontent.com/82414372/139128745-bba16a45-dd0f-412d-8fc6-97a758427c19.png)
+![image](https://user-images.githubusercontent.com/82414372/183323475-ad158478-4b0e-4fd3-ad12-dc91a411f056.png)
 ![image](https://user-images.githubusercontent.com/82414372/139128823-ff065a72-ef85-4fa0-9a44-ce42be7597cd.png)
 ![image](https://user-images.githubusercontent.com/82414372/139128835-9f3437e5-ddf4-4327-b7f7-596120011dec.png)
 
