@@ -35,6 +35,12 @@ status;
 - <img align="center" alt="logo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> - CSS
 - <img align="center" alt="logo_VS_code" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/vscode/vscode-original.svg"> - Visual Studio Code
 
+## Logo da aplicação:
+![image](https://user-images.githubusercontent.com/82414372/183332355-41630f3d-0f05-45de-933e-83e2e3a68799.png)
+
+## Paleta de cores:
+![image](https://user-images.githubusercontent.com/82414372/183332400-ef22b8c2-5e70-40c4-9fa0-d9b740052b30.png)
+
 ## Como executar:
 - O primeiro passo é clonar esse repositório na sua máquina. Dê um git clone em uma pasta do seu computador e puxe todo o conteúdo do repositório;
 ![image](https://user-images.githubusercontent.com/82414372/183323475-ad158478-4b0e-4fd3-ad12-dc91a411f056.png)
@@ -65,3 +71,4 @@ Para criar o banco dentro da sua máquina
 - ![image](https://user-images.githubusercontent.com/82414372/183323791-1ac734eb-f4e6-4ac4-8a08-703068170c28.png)
 
 - Agora assista o vídeo com a plataforma rodando:
+https://youtu.be/8q58pZUXw5A
