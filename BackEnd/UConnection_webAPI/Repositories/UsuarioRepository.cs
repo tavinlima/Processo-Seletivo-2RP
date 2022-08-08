@@ -6,12 +6,26 @@ using UConnection_webAPI.Contexts;
 using UConnection_webAPI.Domains;
 using UConnection_webAPI.Interfaces;
 using UConnection_webAPI.Utils;
+using UConnection_webAPI.ViewModels;
 
 namespace UConnection_webAPI.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
         readonly UConnectionContext ctx = new();
+
+        public void AlterarSenha(Guid idUsuario, string senha)
+        {
+            Usuario usuarioEncontrado = ctx.Usuarios.FirstOrDefault(x => x.IdUsuario == idUsuario);
+            if (usuarioEncontrado != null)
+            {
+                usuarioEncontrado.Senha = Criptografia.GerarHash(senha);
+                ctx.Update(usuarioEncontrado);
+
+                ctx.SaveChanges();
+            }
+        }
+
         public void AlterarStatus(Guid idUsuario, bool status)
         {
             Usuario usuarioEncontrado = ctx.Usuarios.FirstOrDefault(x => x.IdUsuario == idUsuario);
@@ -43,20 +57,41 @@ namespace UConnection_webAPI.Repositories
             }
         }
 
-        public void Atualizar(Guid idUsuario, Usuario usuarioAtualizado)
+        public void Atualizar(Guid idUsuario, AtualizarViewModel usuarioAtualizado)
         {
             Usuario usuarioEncontrado = ctx.Usuarios.Find(idUsuario);
 
             if (usuarioEncontrado.Nome != null|| usuarioEncontrado.IdTipoUsuario != 0)
             {
                 usuarioEncontrado.Nome = usuarioAtualizado.Nome;
+                usuarioEncontrado.Email = usuarioAtualizado.Email;
                 usuarioEncontrado.IdTipoUsuario = usuarioAtualizado.IdTipoUsuario;
+                usuarioEncontrado.Status = usuarioAtualizado.Status;
+
+                ctx.Update(usuarioEncontrado);
+
+                ctx.SaveChanges();
+            }
+        }
+
+        public void AtualizarGeral(Guid idUsuario, AtualizarGeralViewModel usuarioAtualizado)
+        {
+            Usuario usuarioEncontrado = ctx.Usuarios.Find(idUsuario);
+
+            if (usuarioEncontrado.Nome != null || usuarioEncontrado.IdTipoUsuario != 0)
+            {
+                usuarioEncontrado.Nome = usuarioAtualizado.Nome;
+                usuarioEncontrado.Email = usuarioAtualizado.Email;
+
+                ctx.Update(usuarioEncontrado);
+
+                ctx.SaveChanges();
             }
         }
 
         public Usuario BuscarPorId(Guid idUsuario)
         {
-            return ctx.Usuarios.FirstOrDefault(x => x.IdUsuario == idUsuario);
+            return ctx.Usuarios.Include(x => x.TipoUsuario).FirstOrDefault(x => x.IdUsuario == idUsuario);
 
         }
 

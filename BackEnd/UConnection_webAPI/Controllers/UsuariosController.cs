@@ -5,6 +5,7 @@ using System;
 using UConnection_webAPI.Domains;
 using UConnection_webAPI.Interfaces;
 using UConnection_webAPI.Utils;
+using UConnection_webAPI.ViewModels;
 
 namespace UConnection_webAPI.Controllers
 {
@@ -19,6 +20,7 @@ namespace UConnection_webAPI.Controllers
             _usuarioRepository = repo;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -71,7 +73,7 @@ namespace UConnection_webAPI.Controllers
         }
 
         [Authorize(Roles = "3")]
-        [HttpDelete]
+        [HttpDelete("{idUsuario}")]
         public IActionResult Deletar(Guid idUsuario)
         {
             try
@@ -108,6 +110,36 @@ namespace UConnection_webAPI.Controllers
         }
 
         [Authorize(Roles = "2,3")]
+        [HttpPut("{idUsuario}")]
+        public IActionResult AtualizarUsuario(Guid idUsuario, AtualizarViewModel usuarioAtualizado)
+        {
+            try
+            {
+                _usuarioRepository.Atualizar(idUsuario, usuarioAtualizado);
+                return Ok();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+}
+        }
+
+        [Authorize(Roles = "1")]
+        [HttpPatch("Geral/{idUsuario}")]
+        public IActionResult AtualizarUsuarioGeral(Guid idUsuario, AtualizarGeralViewModel usuarioAtualizado)
+        {
+            try
+            {
+                _usuarioRepository.AtualizarGeral(idUsuario, usuarioAtualizado);
+                return Ok();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [Authorize(Roles = "2,3")]
         [HttpPatch("AlterarTipoUsuario")]
         public IActionResult AlterarTipo(Guid idUsuario, int idTipoUsuario)
         {
@@ -121,12 +153,37 @@ namespace UConnection_webAPI.Controllers
                 return BadRequest(erro);
             }
         }
+
+        [Authorize]
         [HttpGet("{idUsuario}")]
         public IActionResult BuscarPorId(Guid idUsuario)
         {
             try
             {
                 return Ok(_usuarioRepository.BuscarPorId(idUsuario));
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [Authorize]
+        [HttpPatch("AlterarSenha/{idUsuario}")]
+        public IActionResult AlterarSenha(Guid idUsuario, string senhaNova, string senhaAntiga)
+        {
+            try
+            {
+                Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(idUsuario);
+
+                bool confere = Criptografia.Comparar(senhaAntiga, usuarioBuscado.Senha);
+                if (!confere)
+                {
+                    return BadRequest("As senhas não são compativeis");
+                }
+
+                _usuarioRepository.AlterarSenha(idUsuario, senhaNova);
+                return Ok();
             }
             catch (Exception erro)
             {
