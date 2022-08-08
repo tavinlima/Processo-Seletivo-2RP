@@ -1,0 +1,111 @@
+@import url(../css/global.css);
+
+.container__listaUsuarios {
+    display: flex;
+    justify-content: center;
+    /* width: 90em; */
+}
+
+.box__listaUsuarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40em;
+}
+
+.box__infAdicionais {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.box__qntdUsuarios {
+    border-width: 1px;
+    border-color: black;
+}
+
+.input__busca {
+    width: 17em;
+    height: 3em;
+    border-color: aliceblue;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(137, 137, 137, 0.052);
+    backdrop-filter: blur(1.5px);
+}
+
+.modal-contentAdd{
+    background-color: #fafafa;
+    margin: 60px auto;
+    width: 28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
+    box-sizing: border-box;
+    box-shadow: 5px 8px 10px 3px rgb(31 30 30 / 25%);
+    padding: 2rem;
+}
+
+.modal__boxCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+}
+
+.modal__boxCadastro label {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttton__abrirPerfil {
+    display: contents;
+    width: 100%;
+}
+
+.list {
+    width: 37rem;
+    margin: 0.5rem 0;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.list__img {
+    width: 4.5em;
+    clip-path: circle();
+    object-fit: cover;
+}
+
+.list__div {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.list__title{
+    font-size: 16px;
+}
+
+.list__subtext {
+    font-size: 14px;
+}

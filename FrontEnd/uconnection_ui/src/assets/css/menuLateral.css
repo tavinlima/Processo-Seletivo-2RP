@@ -1,0 +1,27 @@
+@import url(../css/global.css);
+
+.menuLateral {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 12.5em;
+    background-color: var(--cor-terciaria);
+    color: #fff;
+    list-style: none;
+}
+
+.menuLateral__indice {
+    margin: 1rem 0 0 1rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menuLateral__sair {
+    margin-top: 75vh;
+    margin-left: 1rem;
+    color: red;
+    cursor: pointer;
+}

@@ -4,6 +4,69 @@
         <name>UConnection_webAPI</name>
     </assembly>
     <members>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.Cadastrar(UConnection_webAPI.Domains.Usuario)">
+            <summary>
+            Método para cadastrar um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto Usuário que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Método para deletar um usuário cadastrado
+            </summary>
+            <param name="idUsuario">Id do usuário que será deletado</param>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.Atualizar(System.Guid,UConnection_webAPI.ViewModels.AtualizarViewModel)">
+            <summary>
+            Método para atualizar um usuário
+            </summary>
+            <param name="idUsuario">Id do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Informações que serão atualizadas</param>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Método para buscar um usuário específico
+            </summary>
+            <param name="idUsuario">Id do usuário que será buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.AlterarStatus(System.Guid,System.Boolean)">
+            <summary>
+            Método para atualizar o status de inativo ou ativo
+            </summary>
+            <param name="idUsuario">Id do usuário que terá seu tipo atualizado</param>
+            <param name="status">Status ativo ou inativo</param>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Método para fazer login
+            </summary>
+            <param name="email"></param>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.AlterarTipo(System.Guid,System.Int32)">
+            <summary>
+            Método para atualizar o tipo do usuário
+            </summary>
+            <param name="idUsuario">Id do usuário que terá seu tipo atualizado</param>
+            <param name="idTipoUsuario">Id do tipo de usuário</param>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.AtualizarGeral(System.Guid,UConnection_webAPI.ViewModels.AtualizarGeralViewModel)">
+            <summary>
+            Método para atualizar as informações do usuário do tipo 'geral'
+            </summary>
+            <param name="idUsuario">Id do usuário a ser atualizado</param>
+            <param name="usuarioAtualizado">Informações que serão atualizadas</param>
+        </member>
+        <member name="M:UConnection_webAPI.Interfaces.IUsuarioRepository.AlterarSenha(System.Guid,System.String)">
+            <summary>
+            Método para atualizar a senha do usuário
+            </summary>
+            <param name="idUsuario">Id do usuário que terá sua senha atualizada</param>
+            <param name="senha">Nova senha a ser cadastrada</param>
+        </member>
         <member name="M:UConnection_webAPI.Utils.Upload.UploadFile(Microsoft.AspNetCore.Http.IFormFile,System.String[])">
             <summary>
             Faz o upload do arquivo para o servidor
