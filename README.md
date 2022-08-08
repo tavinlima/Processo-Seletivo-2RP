@@ -16,7 +16,7 @@ status;
 - Apenas usuários do tipo root e admin podem cadastrar novos usuários;
 - Apenas usuários do tipo root e admin podem alterar qualquer informação do usuário (inclusive status);
 - Apenas usuários root podem excluir usuários;
-- Usuários do tipo geral só têm acesso a funcionalidade de listar informações de seu próprio usuário, bem como alterar suas próprias informações;
+- Usuários do tipo geral só têm acesso a funcionalidade de listar informações de seu próprio usuário, bem como alterar suas próprias informações;
 - O login deve ser feito com email e senha.
 
 ## Tecnologias utilizadas (e que você precisa ter no seu computador):
@@ -41,8 +41,8 @@ status;
 ![image](https://user-images.githubusercontent.com/82414372/139128823-ff065a72-ef85-4fa0-9a44-ce42be7597cd.png)
 ![image](https://user-images.githubusercontent.com/82414372/139128835-9f3437e5-ddf4-4327-b7f7-596120011dec.png)
 
-- Abra o VS Code na solução que se encontra na pasta 'Back-End';
-![image](https://user-images.githubusercontent.com/82414372/139128954-b87169ab-c121-425c-8488-f2624bc919be.png)
+- Abra o VS Code na solução que se encontra na pasta 'Back-End' -> 'UConnection_webAPI';
+![image](https://user-images.githubusercontent.com/82414372/183323652-ef314dd8-9d53-4aa2-b01f-3d98fccc03e6.png)
 
 - Entre na aba 'Ferramentas' -> Gerenciador de pacotes do NuGet -> Console do Gerenciador de Pacotes
 ![image](https://user-images.githubusercontent.com/82414372/183323078-edf24338-f249-43bf-ae87-3b72bfb1f2aa.png)
@@ -59,9 +59,9 @@ Para criar o banco dentro da sua máquina
 ![image](https://user-images.githubusercontent.com/82414372/139129203-c86aca5a-35c8-42c3-82c5-c632f47799f4.png)
 
 - Para abrir o front-end da aplicação, abra o cmd na pasta 'UConnection_ui' e de um 'yarn add' para instalar todos os módulos utilizados na aplicação;
-![image](https://user-images.githubusercontent.com/82414372/139129252-b8b939d9-1cd0-4e95-b6b4-ed80a90f27a8.png)
+![image](https://user-images.githubusercontent.com/82414372/183323746-4d0a4cd7-0ecc-4bef-8362-f86a8faa641f.png)
 
 - Em seguida, digite 'npm start' para rodar a aplicação;
-
+![image](https://user-images.githubusercontent.com/82414372/183323791-1ac734eb-f4e6-4ac4-8a08-703068170c28.png)
 
 - Agora assista o vídeo com a plataforma rodando:
