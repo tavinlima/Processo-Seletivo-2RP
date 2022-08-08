@@ -19,6 +19,8 @@ status;
 - Usuários do tipo geral só têm acesso a funcionalidade de listar informações de seu próprio usuário, bem como alterar suas próprias informações;
 - O login deve ser feito com email e senha.
 
+### Link do youtube com a plataforma rodando:  https://youtu.be/8q58pZUXw5A
+
 ## Tecnologias utilizadas (e que você precisa ter no seu computador):
 ### Banco de Dados:
 - <img align="center" alt="SQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" /> - SQL
