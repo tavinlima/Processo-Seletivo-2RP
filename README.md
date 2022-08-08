@@ -62,6 +62,6 @@ Para criar o banco dentro da sua máquina
 ![image](https://user-images.githubusercontent.com/82414372/183323746-4d0a4cd7-0ecc-4bef-8362-f86a8faa641f.png)
 
 - Em seguida, digite 'npm start' para rodar a aplicação;
-![image](https://user-images.githubusercontent.com/82414372/183323791-1ac734eb-f4e6-4ac4-8a08-703068170c28.png)
+- ![image](https://user-images.githubusercontent.com/82414372/183323791-1ac734eb-f4e6-4ac4-8a08-703068170c28.png)
 
 - Agora assista o vídeo com a plataforma rodando:
